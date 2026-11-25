@@ -12,7 +12,9 @@ Custom firmware for M5Stack Core Basic (original ESP32, 320x240 LCD, three butto
 A/C navigate, B opens, B/C return from a page. A on a page forces a health check.
 
 ## Networking
-Your Psydekik API must listen on an address reachable from the ESP32, not only 127.0.0.1. For example, bind FastAPI/Uvicorn to `0.0.0.0` behind LAN firewall restrictions, and set `PSYDEKIK_HEALTH_URL` to the server's LAN IP. HTTP is for trusted-LAN prototyping only; use authenticated HTTPS for privileged commands later.
+Psydekik API must listen on an address reachable from the ESP32, not only 127.0.0.1. For example: bind FastAPI/Uvicorn to `0.0.0.0` behind LAN firewall restrictions, 
+and set `PSYDEKIK_HEALTH_URL` to the server's LAN IP. HTTP is for trusted-LAN prototyping only; use authenticated HTTPS for privileged commands later.
 
 ## Notes
-The HTTP 200 status is treated as an available server, not proof that every Psydekik subsystem is healthy. The firmware intentionally contains no API key or arbitrary remote execution facility.
+The HTTP 200 status is treated as an available server, not proof that every Psydekik subsystem is healthy. 
+The firmware intentionally contains no API key or arbitrary remote execution facility.
